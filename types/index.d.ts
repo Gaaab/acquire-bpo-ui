@@ -25,10 +25,18 @@ export type NotificationVariantType = 'success' | 'error' | 'info' | 'warning'
 export type CustomerFormType = {
   isModalActive: boolean
   title: string
-  form: any
+  form: CustomerForm
   notificationTitle: string
   notificationMessage: string
   notificationVariant: NotificationVariantType
   isNotificationVisible: boolean
   loading?: boolean
+}
+
+export type CustomerForm = {
+  first_name: string
+  last_name: string
+  email: string
+  dob: string
+  age: number | null
 }

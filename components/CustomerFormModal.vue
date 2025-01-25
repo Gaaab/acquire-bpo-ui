@@ -45,6 +45,7 @@ const handleCancel = () => emit('update:isModalActive', false)
       <FormControl
         v-model="form.first_name"
         name="first_name"
+        required
       />
     </FormField>
 
@@ -52,6 +53,7 @@ const handleCancel = () => emit('update:isModalActive', false)
       <FormControl
         v-model="form.last_name"
         name="last_name"
+        required
       />
     </FormField>
 
@@ -60,6 +62,7 @@ const handleCancel = () => emit('update:isModalActive', false)
         v-model="form.email"
         name="email"
         type="email"
+        required
       />
     </FormField>
 
@@ -68,6 +71,7 @@ const handleCancel = () => emit('update:isModalActive', false)
         v-model="form.dob"
         name="date"
         type="date"
+        required
       />
     </FormField>
 
@@ -76,6 +80,7 @@ const handleCancel = () => emit('update:isModalActive', false)
         v-model="form.age"
         name="age"
         type="number"
+        required
       />
     </FormField>
 

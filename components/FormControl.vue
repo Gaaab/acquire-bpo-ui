@@ -79,8 +79,6 @@ const computedType = computed(() => (props.options ? 'select' : props.type))
 
 const controlIconH = computed(() => (props.type === 'textarea' ? 'h-full' : 'h-12'))
 
-//const mainStore = useMainStore()
-
 const selectEl = ref(null)
 
 const textareaEl = ref(null)
@@ -108,17 +106,11 @@ if (props.ctrlKFocus) {
   }
 
   onMounted(() => {
-    //if (!mainStore.isFieldFocusRegistered) {
     window.addEventListener('keydown', fieldFocusHook)
-    //mainStore.isFieldFocusRegistered = true
-    //} else {
-    //  // console.error('Duplicate field focus event')
-    //}
   })
 
   onBeforeUnmount(() => {
     window.removeEventListener('keydown', fieldFocusHook)
-    //mainStore.isFieldFocusRegistered = false
   })
 }
 </script>
